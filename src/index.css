@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--primary:#6b4f3a;--accent:#d9b48f}
+body{@apply bg-lightbg text-gray-900}
+.dark body{@apply bg-gray-900 text-gray-100}
+/* a{@apply underline-none} */
