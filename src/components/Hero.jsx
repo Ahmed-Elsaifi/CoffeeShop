@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import ice from '../public/ice.jpg'
 export default function Hero(){
   return (
     <motion.section className="bg-white  dark:bg-gray-800 rounded-xl p-8 shadow-md flex flex-col md:flex-row items-center" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.6}}>
@@ -12,7 +13,7 @@ export default function Hero(){
         </div>
       </div>
       <div className="w-full md:w-1/3 mt-4 md:mt-0">
-        <img src="/src/public/ice.jpg" alt="hero" className="rounded-md w-full h-56 object-cover"/>
+        <img src={ice}alt="hero" className="rounded-md w-full h-56 object-cover"/>
       </div>
     </motion.section>
   )

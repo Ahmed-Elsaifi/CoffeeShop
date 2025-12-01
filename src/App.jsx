@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import AOS from 'aos'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -18,7 +18,7 @@ export default function App(){
   useEffect(()=>{document.documentElement.classList.toggle('dark',dark)},[dark])
   return (
     <CartProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar dark={dark} setDark={setDark}/>
         <main className="max-w-6xl mx-auto px-4 py-8">
           <Routes>
@@ -32,7 +32,7 @@ export default function App(){
           </Routes>
         </main>
         <Footer/>
-      </BrowserRouter>
+      </HashRouter>
     </CartProvider>
   )
 }
